@@ -11,4 +11,8 @@ export class InputComponent {
   @Input() label: string ;
   @Input() control: FormControl;
   
+  showErrors(){
+    var {dirty, touched, errors} = this.control;
+    return dirty && touched && errors;
+  }
 }
